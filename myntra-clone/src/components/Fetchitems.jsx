@@ -9,7 +9,7 @@ const Fetchitems = () => {
     if (fetchStatus.fetchDone) return;
     const controller = new AbortController();
     const signal = controller.signal;
-    fetch("http://localhost:8080/items", { signal })
+    fetch("https://myntraclone-4y0a.onrender.com/items", { signal })
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(itemsActions.addInitialItems(items[0]));
@@ -20,9 +20,6 @@ const Fetchitems = () => {
       controller.abort();
     };
   }, [fetchStatus]);
-  return (
-    <>
-    </>
-  );
+  return <></>;
 };
 export default Fetchitems;

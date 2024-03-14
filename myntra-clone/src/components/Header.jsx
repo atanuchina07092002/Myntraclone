@@ -28,7 +28,6 @@ const Header = () => {
         </a>
       </nav>
       <div className="search_bar">
-        <BsSearch />
         <input
           className="search_input"
           placeholder="Search for products, brands and more"
